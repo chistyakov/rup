@@ -13,6 +13,11 @@
 
 \documentclass[a4paper, 10pt, oneside, draft]{article}
 
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
 %include the usecases package
 \usepackage{usecases}
 
@@ -24,41 +29,48 @@
 %(3rd Edition) by Craig Larman.
 \begin{usecase}
 
-\addtitle{Use Case 1}{Template test} 
+\addtitle{Use Case 1}{ViewChannelRating} 
+
+\addfield{ID:}{1}
+
+\addfield{Краткое описание:}{}
 
 %Scope: the system under design
-\addfield{Scope:}{System-wide}
+%\addfield{Scope:}{System-wide}
 
 %Level: "user-goal" or "subfunction"
-\addfield{Level:}{User-goal}
+%\addfield{Level:}{User-goal}
 
 %Primary Actor: Calls on the system to deliver its services.
-\addfield{Primary Actor:}{End-User}
+\addfield{Главные актеры:}{IPTV user}
+
+\addfield{Второстепенные актеры:}{нет}
+
 
 %Stakeholders and Interests: Who cares about this use case and what do they want?
-\additemizedfield{Stakeholders and Interests:}{
-	\item Stakeholder 1 name: his interests
-	\item Stakeholder 2 name: his interests
-}
+%\additemizedfield{Stakeholders and Interests:}{
+	%\item Stakeholder 1 name: his interests
+	%\item Stakeholder 2 name: his interests
+%}
 
 %Preconditions: What must be true on start and worth telling the reader?
-\addfield{Preconditions:}{}
+\addfield{Предусловия:}{нет}
 %when multiple
 %\additemizedfield{Preconditions:}{} 
 
 %Postconditions: What must be true on successful completion and worth telling the reader
-\addfield{Postconditions:}{}
+\addfield{Постусловия:}{нет}
 %when multiple
 %\additemizedfield{Preconditions:}{}
 
 %Main Success Scenario: A typical, unconditional happy path scenario of success.
-\addscenario{Main Success Scenario:}{
+\addscenario{Основной поток:}{
 	\item The first action
 	\item The second action
 }
 
 %Extensions: Alternate scenarios of success or failure.
-\addscenario{Extensions:}{
+\addscenario{Альтернативные потоки:}{
 	\item[2.a] Invalid login data:
 		\begin{enumerate}
 		\item[1.] System shows failure message
@@ -72,18 +84,18 @@
 }
 
 %Special Requirements: Related non-functional requirements.
-\additemizedfield{Special Requirements:}{
-	\item first applicable non-functional requirement
-	\item second applicable non-functional requirement
-}
+%\additemizedfield{Special Requirements:}{
+	%\item first applicable non-functional requirement
+	%\item second applicable non-functional requirement
+%}
 
 %Technology and Data Variations List: Varying I/O methods and data formats.
-\addscenario{Technology and Data Variations List:}{
-	\item[1a.] Alternative first action with other technology
-}
+%\addscenario{Technology and Data Variations List:}{
+	%\item[1a.] Alternative first action with other technology
+%}
 
 %Frequency of Occurrence: Influences investigation, testing and timing of implementation.
-\addfield{Frequency of Occurrence:}{}
+%\addfield{Frequency of Occurrence:}{}
 
 %Miscellaneous: Such as open issues/questions
 %\addfield{Open Issues:}{}
